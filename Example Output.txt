@@ -1,0 +1,10 @@
+// A2 Phase 3 Output from running Main
+
+>java PartySim
+ === Final Output ===
+=====================
+[Person1, Person2, Another Person, Valid but empty description]
+Person1 talked to [Person2, Person2, Another Person]
+Person2 talked to [Person1, Person1, Valid but empty description]
+Another Person talked to [Valid but empty description, Valid but empty description, Person1]
+Valid but empty description talked to [Another Person, Another Person, Person2]
