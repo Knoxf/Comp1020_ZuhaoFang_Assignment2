@@ -1,0 +1,4 @@
+Person1,Fairly Interesting,0.3,0.3,Person0.png
+Person2,More Testing of People,0.4,0.4,Person0.png
+Another Person,Might have many words or few,0.5,0.5,Person0.png
+Valid but empty description,0.6,0.6,Person0.png

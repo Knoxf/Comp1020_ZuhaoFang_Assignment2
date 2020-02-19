@@ -7,7 +7,7 @@ public class Map{
 
   // in pixels
   private int mapSize = 512; // in pixels
-  private int tileSize = 64; // The tile size
+  private int tileSize = 64; // 
 
   // Load a prebuilt map by index
   public Map(int index){
@@ -77,9 +77,7 @@ public class Map{
 	// This will convert the selected test case from an array of Strings into
   // the 2D array of booleans used in Assignment 2.
   private static char[][] getBoard(int index){
-      // just a test return a num 2d array
-      char[][] theBoard = new char[2][2];
-      return theBoard;
+
   }
 
 // Debugging
