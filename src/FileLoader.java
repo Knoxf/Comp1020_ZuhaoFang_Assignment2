@@ -22,6 +22,28 @@ public class FileLoader{
 		"Another Person,Might have many words or few",
 		"Valid but empty description,"
 	};
-	
+
+	public static PersonList loadPeople(){
+		PersonList theNewPersonList;
+
+
+	}
+
+	public static PersonList loadPeople(String fileName){
+		BufferedReader fileIn;
+		String lineIn;
+		Scanner lineScanner;
+
+		try{
+			fileIn = new BufferedReader(new FileReader("TestPeople"));
+			lineIn = fileIn.readLine();
+
+			while(lineIn != null){
+
+			}
+		}catch(IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
 
 }
