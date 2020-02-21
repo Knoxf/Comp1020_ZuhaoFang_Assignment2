@@ -11,7 +11,8 @@ public class Map{
 
   // Load a prebuilt map by index
   public Map(int index){
-
+      // Call the map that what user call from keyboard
+      Map newMap = new Map(Map.getBoard(index));
   }
 
   // Generate the map based on the template
@@ -26,14 +27,27 @@ public class Map{
 		
 	}
 
+	private String lookUpArt(char tileCode){
+
+    }
+
+    public static char[][] stringToChar(String[] strings){
+      char[][] returnChar = new char[strings.length][strings[0].length()];
+
+      for(int i=0;i<returnChar.length;i++){
+          for(int j=0;j<returnChar[i].length;j++){
+              returnChar[i][j] = strings[i].charAt(i);
+          }
+      }
+      return returnChar;
+    }
+
   
 
 	// Testing Data for now, we will replace this later
 	 // Add more if you want
 	private static String[][] testBoards = {
-    { "X.X",
-      ".X.",
-      "X.X"},
+    { "X.X", ".X.", "X.X"},
 
     { ".......",
       "..X.X..",
@@ -77,8 +91,23 @@ public class Map{
 	// This will convert the selected test case from an array of Strings into
   // the 2D array of booleans used in Assignment 2.
   private static char[][] getBoard(int index){
+      //the rowNum is the length of row
+      int rowNum = testBoards[index].length;
+      //the colNum is the length of col
+      int colNum = testBoards[index][0].length();
 
+      //deep copy the strings to a 2d char array
+      String[] theMap = testBoards[index];
+      char[][] board = new char[rowNum][colNum];
+      for(int i=0;i<rowNum;i++){
+          for(int j=0;j<colNum;j++){
+              board[i][j] = theMap[i].charAt(j);
+          }
+      }
+      return board;
   }
+
+
 
 // Debugging
   public static void main(String[] args){
