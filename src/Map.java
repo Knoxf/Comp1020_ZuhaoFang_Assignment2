@@ -29,6 +29,7 @@ public class Map{
 
 	private String lookUpArt(char tileCode){
 
+      return null;
     }
 
     public static char[][] stringToChar(String[] strings){

@@ -147,13 +147,14 @@ public class PartySim{
 		// Place class and also Map class so now it is simpler. 
 		//Map m = new Map(Map.getBoard(index));
 		
-		Place tempPlace = new Place(index);
+		//Place tempPlace = new Place(index);
 
-		System.out.println("New Place Created: " + tempPlace);
+//System.out.println("New Place Created: " + tempPlace);
 // 		[ ] Next task
 // 		System.out.println(tempPlace.mapToString());
 
-		return tempPlace;
+		//return tempPlace;
+		return null;
 	}
 
 	//  ----- Stretch goal - Major Feature [ ] ----- 
