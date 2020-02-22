@@ -9,6 +9,9 @@ public class Place{
 	private String description;
 	// Objects stored by Place (People at the Place in this case)
 	private PersonList people;
+	private Map theMap;
+	private PersonList People;
+
 
 
 	// Enable debugging mode for this script
@@ -35,8 +38,11 @@ public class Place{
 	public Place(String name, String description, Map theMap, PersonList People){
 		this.name = name;
 		this.description = description;
-		
+		this.theMap = theMap;
+		this.People = People;
 	}
+
+
 
 	// --- Strings and Descriptions ---
 	// toString simply returns the name

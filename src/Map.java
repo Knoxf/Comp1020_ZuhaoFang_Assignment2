@@ -4,32 +4,40 @@ public class Map{
 
 
   private char[][] currentMap;
-
   // in pixels
   private int mapSize = 512; // in pixels
   private int tileSize = 64; // 
 
   // Load a prebuilt map by index
   public Map(int index){
-      // Call the map that what user call from keyboard
-      Map newMap = new Map(Map.getBoard(index));
+      currentMap = getBoard(index);
   }
 
   // Generate the map based on the template
 	public Map(char[][] mapTemplate){
-
+      this.currentMap = mapTemplate;
 	}
 
 	// Take each char in the array and draw the corresponding image. 
 	// laying them out in a grid might be tricky, you can keep a fixed size for now
 	// of 64 px images on a 512 px map
 	public void drawMap(){
-		
+      
 	}
 
 	private String lookUpArt(char tileCode){
+      String theChar = null;
+      if(tileCode == '.'){
+          theChar = "ground.png";
+      }
+      if(tileCode == 'X'){
+          theChar = "groundRock.png";
+      }
+      if(tileCode == 'P'){
+          theChar = "Person0.png";
+      }
 
-      return null;
+      return theChar;
     }
 
     public static char[][] stringToChar(String[] strings){
