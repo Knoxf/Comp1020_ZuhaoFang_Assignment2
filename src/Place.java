@@ -31,6 +31,13 @@ public class Place{
 
 	}
 
+	//Constructor, accepts name, description,map and PersonList
+	public Place(String name, String description, Map theMap, PersonList People){
+		this.name = name;
+		this.description = description;
+		
+	}
+
 	// --- Strings and Descriptions ---
 	// toString simply returns the name
 	public String toString(){
