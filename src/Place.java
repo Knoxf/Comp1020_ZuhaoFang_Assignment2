@@ -42,6 +42,9 @@ public class Place{
 		this.People = People;
 	}
 
+	public void drawMap(){
+
+	}
 
 
 	// --- Strings and Descriptions ---

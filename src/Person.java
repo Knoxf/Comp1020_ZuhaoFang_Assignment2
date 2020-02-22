@@ -6,11 +6,19 @@ public class Person{
 	// backstory
 	// alibi
 	// itemlist
-
 	private String name; // Name of the person
 	private String description; // Description of the person. 
 
-	private PersonList talkedTo; // list of everyone that they talked to at the party. 
+	private PersonList talkedTo; // list of everyone that they talked to at the party.
+
+	private double x;
+	private double y;
+	private String artFile;
+
+	public void setPosition(double xPos, double yPos){
+
+	}
+
 
 
 	public Person(String name){

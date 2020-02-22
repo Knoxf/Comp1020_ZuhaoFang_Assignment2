@@ -1,4 +1,9 @@
-// A data class for storing a map of a Place. 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+// A data class for storing a map of a Place.
 // This will handle the 2d array of art types for us. 
 public class Map{
 
@@ -22,7 +27,24 @@ public class Map{
 	// laying them out in a grid might be tricky, you can keep a fixed size for now
 	// of 64 px images on a 512 px map
 	public void drawMap(){
-      
+        BufferedImage png;
+      try {
+          for (int i=0; i < currentMap.length; i++) {
+              for (int j=0; j < currentMap[i].length; j++) {
+                  if (lookUpArt(currentMap[i][j]).equals("ground.png")){
+                      png =ImageIO.read(new File("ground.png"));
+                  }
+                  if(lookUpArt(currentMap[i][j]).equals("groundRock.png")){
+                      png = ImageIO.read(new File("groundRock.png"));
+                  }
+                  if(lookUpArt(currentMap[i][j]).equals("Person0.png")){
+                      png = ImageIO.read(new File("Person0.png"));
+                  }
+              }
+          }
+      }catch (IOException e){
+          System.out.println(e.getMessage());
+      }
 	}
 
 	private String lookUpArt(char tileCode){
